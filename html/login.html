@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Font & Icon -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+  <!-- Plugins -->
+  <!-- CSS plugins goes here -->
+
+  <!-- Main Style -->
+  <link rel="stylesheet" href="../css/style.min.css" id="main-css">
+  <link rel="stylesheet" href="#" id="sidebar-css">
+  <title>МГЛ - Московский городской лизинг</title>
+</head>
+<body class="login-page">
+  <div class="container">
+    <!-- LOG IN FORM -->
+    <div class="pt-4">
+    <form class="card p-4 mx-auto">
+      <div class="text-center mb-4 pb-0 border-bottom">
+        <h1 class=" mb-1">Войти</h1>
+        <p>Московский городской лизинг</p>
+      </div>
+      <div class="form-group">
+        <span class="input-icon">
+          <i class="material-icons">phone</i>
+          <input type="text" class="form-control inputmask" data-inputmask-alias="999 999-99-99">
+          <small class="form-text text-muted">Формат ввода 999 999-99-99</small>
+        </span>
+      </div>
+      <div class="form-group">
+        <span class="input-icon">
+          <i class="material-icons">lock_open</i>
+          <input type="password" class="form-control" placeholder="">
+        </span>
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-primary btn-block">Войти</button>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-6">
+            <a href="#">
+              <small>
+                Регистрация
+              </small> </a>
+          </div>
+          <div class="col-6 text-right">
+            <a href="#">
+              <small>
+                Забыл пароль
+              </small></a>
+          </div>
+        </div>
+      </div>
+    </form>
+    <!-- /LOG IN FORM -->
+    </div>
+  </div>
+  <!-- Main Scripts -->
+  <!-- Main Scripts -->
+  <script src="../js/script.min.js"></script>
+  <script src="../js/app.min.js"></script>
+
+  <!-- Plugins -->
+  <script src="../../plugins/inputmask/jquery.inputmask.min.js"></script>
+  <script>
+    $(() => {
+
+      Inputmask.extendAliases({
+        decimal: {
+          alias: 'numeric',
+          digits: 2,
+          autoGroup: true,
+          groupSeparator: ',',
+        }
+      })
+      Inputmask().mask(document.querySelectorAll('.inputmask'))
+
+    })
+  </script>
+</body>
+</html>
