@@ -16,6 +16,7 @@
 
   <!-- Main Style -->
   <link rel="stylesheet" href="../css/style.min.css" id="main-css">
+  <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css" id="main-css">
   <link rel="stylesheet" href="#" id="sidebar-css">
   <title>МГЛ - Московский городской лизинг</title>
 </head>
@@ -198,9 +199,10 @@
     <!-- Main body -->
     <div class="main-body pt-4">
       <h5 class="mb-4">Сделки</h5>
-      <div class="row">
+      <div class="scrollBox">
+      <div class="d-flex flex-nowrap">
       <!-- SHARED LISTS -->
-      <div class="col-xl col-md-4 mb-lg-4 mb-2">
+      <div class="deal-v-item mb-2">
         <h6 class="text-center">Первичный контакт</h6>
         <ul class="list-v list-group list-group-sm sortable">
           <li class="list-group-item sort-handle ">
@@ -222,7 +224,7 @@
       </div>
       <!-- /SHARED LISTS -->
       <!-- SHARED LISTS -->
-      <div class="col-xl col-md-4 mb-lg-4 mb-2">
+      <div class="deal-v-item mb-2">
         <h6 class="text-center">Запрошенные документы</h6>
         <ul class="list-v list-group list-group-sm sortable">
           <li class="list-group-item sort-handle ">
@@ -250,7 +252,7 @@
       </div>
       <!-- /SHARED LISTS -->
       <!-- SHARED LISTS -->
-      <div class="col-xl col-md-4 mb-lg-4 mb-2">
+      <div class="deal-v-item mb-2">
         <h6 class="text-center">Проверка документов</h6>
         <ul class="list-group list-v list-group-sm sortable">
           <li class="list-group-item sort-handle ">
@@ -264,7 +266,7 @@
       </div>
       <!-- /SHARED LISTS -->
       <!-- SHARED LISTS -->
-      <div class="col-xl col-md-4 mb-lg-4 mb-2">
+      <div class="deal-v-item mb-2">
         <h6 class="text-center">Встреча</h6>
         <ul class="list-group list-v list-group-sm sortable">
           <li class="list-group-item sort-handle ">
@@ -278,7 +280,7 @@
       </div>
       <!-- /SHARED LISTS -->
       <!-- SHARED LISTS -->
-      <div class="col-xl col-md-4 mb-lg-4 mb-2">
+      <div class="deal-v-item mb-2">
         <h6 class="text-center">Первоначальный платеж</h6>
         <ul class="list-group list-v list-group-sm sortable">
           <li class="list-group-item sort-handle ">
@@ -292,7 +294,7 @@
       </div>
       <!-- /SHARED LISTS -->
       <!-- SHARED LISTS -->
-      <div class="col-xl col-md-4 mb-lg-4 mb-2">
+      <div class="deal-v-item mb-2">
         <h6 class="text-center">Активный договор</h6>
         <ul class="list-group list-v list-group-sm sortable">
           <li class="list-group-item sort-handle ">
@@ -306,7 +308,49 @@
       </div>
       <!-- /SHARED LISTS -->
       <!-- SHARED LISTS -->
-      <div class="col-xl col-md-4 mb-lg-4 mb-2">
+      <div class="deal-v-item mb-2">
+        <h6 class="text-center">Долг закрыт</h6>
+        <ul class="list-group list-v list-group-sm sortable">
+          <li class="list-group-item sort-handle">
+            <a class="d-block" href="#" data-toggle="modal" data-target="#basicModal">
+              <span class="d-block">Иванов Иван Иванович</span>
+              <em class="d-block">+7 987 66-66-66</em>
+              <em class="d-block">ivanov@mail.ru</em>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- /SHARED LISTS -->
+      <!-- SHARED LISTS -->
+      <div class="deal-v-item mb-2">
+        <h6 class="text-center">Долг закрыт</h6>
+        <ul class="list-group list-v list-group-sm sortable">
+          <li class="list-group-item sort-handle">
+            <a class="d-block" href="#" data-toggle="modal" data-target="#basicModal">
+              <span class="d-block">Иванов Иван Иванович</span>
+              <em class="d-block">+7 987 66-66-66</em>
+              <em class="d-block">ivanov@mail.ru</em>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- /SHARED LISTS -->
+      <!-- SHARED LISTS -->
+      <div class="deal-v-item mb-2">
+        <h6 class="text-center">Долг закрыт</h6>
+        <ul class="list-group list-v list-group-sm sortable">
+          <li class="list-group-item sort-handle">
+            <a class="d-block" href="#" data-toggle="modal" data-target="#basicModal">
+              <span class="d-block">Иванов Иван Иванович</span>
+              <em class="d-block">+7 987 66-66-66</em>
+              <em class="d-block">ivanov@mail.ru</em>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- /SHARED LISTS -->
+      <!-- SHARED LISTS -->
+      <div class="deal-v-item mb-2">
         <h6 class="text-center">Долг закрыт</h6>
         <ul class="list-group list-v list-group-sm sortable">
           <li class="list-group-item sort-handle">
@@ -320,6 +364,7 @@
       </div>
       <!-- /SHARED LISTS -->
       </div>
+      </div>
     </div>
   </div>
   <!-- Main Scripts -->
@@ -327,6 +372,7 @@
   <script src="../js/script.min.js"></script>
   <script src="../js/app.min.js"></script>
   <script src="../../plugins/sortablejs/Sortable.min.js"></script>
+  <script src="../../plugins/scrollcustome/jquery.mCustomScrollbar.min.js"></script>
   <script>
     $(() => {
       // create from all .sortable classes
@@ -342,7 +388,14 @@
           }
         })
       })
-
+      $(window).on("load",function(){
+        $(".scrollBox").mCustomScrollbar(
+          {
+            axis:"x",
+            theme:"dark"
+          }
+        );
+      });
     })
   </script>
   <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModalLabel" aria-hidden="true">
