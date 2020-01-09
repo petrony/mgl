@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Font & Icon -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+
+  <!-- Plugins -->
+  <link rel="stylesheet" href="../../plugins/flatpickr/flatpickr.min.css">
+  <link rel="stylesheet" href="../../plugins/flatpickr/plugins/monthSelect/style.css">
+  <link rel="stylesheet" href="../../plugins/clockpicker/bootstrap-clockpicker.min.css">
+  <!-- CSS plugins goes here -->
+
+  <!-- Main Style -->
+  <link rel="stylesheet" href="../css/style.min.css" id="main-css">
+  <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="#" id="sidebar-css">
+  <title>МГЛ - Московский городской лизинг</title>
+</head>
+<body>
+    <div class="sidebar">
+
+    <!-- Sidebar header -->
+    <div class="sidebar-header">
+      <a href="index.html" class="logo">
+        МГЛ
+      </a>
+      <a href="#" class="nav-link nav-icon rounded-circle ml-auto" data-toggle="sidebar">
+        <i class="material-icons">close</i>
+      </a>
+    </div>
+    <!-- /Sidebar header -->
+
+    <!-- Sidebar body -->
+    <div class="sidebar-body">
+      <ul class="nav nav-sub mt-3" id="menu">
+        <li class="nav-item">
+          <a class="nav-link has-icon" href="./deal.html">
+            <i class="fa fa-briefcase"></i>Сделки</a>
+          <ul>
+            <li><a href="./deal-v.html">Ворнки продаж</a></li>
+            <li><a href="./deal.html">Сделки</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link has-icon" href="./org.html">
+            <i class="fa fa-university"></i>Организации</a>
+            <ul>
+              <li><a href="./bank-details.html">Банковские реквизиты организации</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link has-icon" href="./clients.html">
+            <i class="fa fa-users"></i>Клиенты</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link has-icon" href="./docs.html">
+            <i class="fa fa-file-code"></i>Документы</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link has-icon" href="./contracts.html">
+            <i class="fa fa-file-pdf"></i>Контракты</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link has-icon" href="">
+            <i class="fa fa-calendar"></i>Графики платежей</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link has-icon" href="">
+            <i class="fa fa-money-bill-alt"></i>Оплата и задолженность</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link has-icon" href="">
+            <i class="fa fa-car-alt"></i>Автомобили</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link has-icon" href="">
+            <i class="fa fa-file"></i>Отчеты</a>
+        </li>
+      </ul>
+    </div>
+    <!-- /Sidebar body -->
+
+  </div>
+  <!-- /Sidebar -->
+
+  <!-- Main -->
+  <div class="main">
+    <!-- Main header -->
+    <div class="main-header">
+      <a class="nav-link nav-icon rounded-circle" href="#" data-toggle="sidebar"><i class="material-icons">menu</i></a>
+      <ul class="nav nav-circle nav-gap-x-1 ml-auto">
+        <li class="nav-item"><a class="nav-link nav-icon" data-toggle="modal" href="#searchModal"><i class="material-icons">search</i></a></li>
+        <li class="nav-item d-none d-sm-block"><a class="nav-link nav-icon" href="" id="refreshPage"><i class="material-icons">refresh</i></a></li>
+
+        <li class="nav-item dropdown nav-notif">
+          <a class="nav-link nav-icon has-badge dropdown-toggle no-caret" href="#" data-toggle="dropdown" data-display="static">
+            <i class="material-icons">notifications</i>
+            <span class="badge badge-pill badge-primary">4</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right shadow border-0 p-0">
+            <form>
+              <div class="card border-0">
+                <div class="card-header bg-primary text-white">
+                  <i class="material-icons mr-2">notifications</i> 4 Уведомления
+                </div>
+                <div class="card-body p-1 font-size-sm">
+                  <div class="list-group list-group-sm list-group-flush">
+                    <a href="javascript:void(0)" class="list-group-item list-group-item-action">
+                      <div class="media">
+                        <span class="bg-primary-faded text-primary btn-icon rounded-circle"><i class="material-icons">person_add</i></span>
+                        <div class="media-body ml-2">
+                          5 Новые пользователи присоединились сегодня
+                          <div class="small text-muted mt-1 d-flex align-items-center">
+                            <i class="material-icons mr-1 font-size-sm">access_time</i> 5 minutes ago
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="javascript:void(0)" class="list-group-item list-group-item-action">
+                      <div class="media">
+                        <span class="bg-info-faded text-info btn-icon rounded-circle"><i class="material-icons">comment</i></span>
+                        <div class="media-body ml-2">
+                          2 Новые комментарии
+                          <div class="small text-muted mt-1 d-flex align-items-center">
+                            <i class="material-icons mr-1 font-size-sm">access_time</i> 10 минут назад
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="javascript:void(0)" class="list-group-item list-group-item-action">
+                      <div class="media">
+                        <span class="bg-success-faded text-success btn-icon rounded-circle"><i class="material-icons">shopping_cart</i></span>
+                        <div class="media-body ml-2">
+                          10+ Новых заказа
+                          <div class="small text-muted mt-1 d-flex align-items-center">
+                            <i class="material-icons mr-1 font-size-sm">access_time</i> 15 минут назад
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="javascript:void(0)" class="list-group-item list-group-item-action">
+                      <div class="media">
+                        <span class="bg-warning-faded text-warning btn-icon rounded-circle"><i class="material-icons">person</i></span>
+                        <div class="media-body ml-2">
+                          Заполните данные своей учетной записи
+                          <div class="small text-muted mt-1 d-flex align-items-center">
+                            <i class="material-icons mr-1 font-size-sm">access_time</i> 20 минут назад
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="card-footer text-center">
+                  <a href="javascript:void(0)">Посмотреть все уведомления &rsaquo;</a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-icon has-badge" href="#chatModal" data-toggle="modal">
+            <i class="material-icons">chat</i>
+            <span class="badge badge-pill badge-warning">2</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="nav nav-pills">
+        <li class="nav-link-divider mx-2"></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link has-img dropdown-toggle px-2" href="#" data-toggle="dropdown">
+            <img src="../img/user.svg" alt="Admin" class="rounded-circle mr-2">
+            <span class="d-none d-sm-block">Admin</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right shadow border-0 p-0">
+            <div class="card border-0">
+              <div class="card-header flex-column px-5">
+                <img src="../img/user.svg" alt="Admin" class="rounded-circle mb-2" width="75" height="75">
+                <h6>Admin</h6>
+                <small class="text-muted">Aдминистратор</small>
+              </div>
+              <div class="list-group list-group-flush list-group-sm list-group-borderless py-2">
+                <a href="#" class="list-group-item list-group-item-action has-icon"><i class="material-icons mr-2">person</i>Мой профиль</a>
+                <a href="#" class="list-group-item list-group-item-action has-icon"><i class="material-icons mr-2">settings</i>Настройки</a>
+                <a href="../html/login.html" class="list-group-item list-group-item-action has-icon text-danger"><i class="material-icons mr-2">exit_to_app</i>Выйти</a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- /Main header -->
+    <!-- Main body -->
+  <div class="main-body pt-4">
+    <h5 class="mb-4">Добавление информации про залог под автомобиль</h5>
+
+      <div class="card card-style-1 mb-3">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-lg-12">
+              <form action="#">
+                <div class="row mb-3">
+                  <div class="col-lg-6">
+                    <div class="row mb-2">
+                      <div class="col-sm-6">
+                        <div class="custom-control custom-radio d-flex align-items-center">
+                          <input type="radio" id="customRadio1" name="radio1" class="custom-control-input" checked>
+                          <label class="custom-control-label small pt-1" for="customRadio1">Новый автомобиль</label>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="customRadio2" name="radio1" class="custom-control-input">
+                          <label class="custom-control-label small pt-1" for="customRadio2">БУ автомобиль</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group mb-1">
+                      <label for="model" class="small">Марка, модель ТС</label>
+                      <input type="text" class="form-control form-control-sm" placeholder="">
+                    </div>
+                    <div class="form-group mb-1">
+                      <label for="vin" class="small">Идентификационный номер (VIN)</label>
+                      <input type="text" class="form-control form-control-sm" placeholder="">
+                    </div>
+                    <div class="form-group mb-1">
+                      <label for="type_tc" class="small">Тип ТС</label>
+                      <input type="text" class="form-control form-control-sm" placeholder="">
+                    </div>
+                    <div class="form-group mb-2">
+                      <label for="category_tc" class="small">Категория ТС</label>
+                      <select class="custom-select custom-select-sm">
+                        <option selected>Выбрать необходимое</option>
+                        <option value="1">A</option>
+                        <option value="2">B</option>
+                        <option value="3">C</option>
+                        <option value="4">Прицеп</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="year_made" class="small">Год изготовления ТС</label>
+                      <input type="text" class="form-control form-control-sm datepicker" placeholder="">
+                    </div>
+                    <div class="form-group mb-1">
+                      <label for="type_motor" class="small">Модель, № двигателя</label>
+                      <input type="text" class="form-control form-control-sm" placeholder="">
+                    </div>
+                    <div class="form-group mb-1">
+                      <label for="shasi" class="small">Шасси (рама) №</label>
+                      <input type="text" class="form-control form-control-sm" placeholder="">
+                    </div>
+                    <div class="form-group mb-1">
+                      <label for="cabine" class="small">Кузов (кабина, прицеп) №</label>
+                      <input type="text" class="form-control form-control-sm" placeholder="">
+                    </div>
+                    <div class="form-group mb-1">
+                      <label for="color" class="small">Цвет кузова (кабины, прицепа)</label>
+                      <input type="text" class="form-control form-control-sm" placeholder="">
+                    </div>
+
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group mb-1">
+                      <label for="state_made" class="small">Организация - изготовитель ТС (страна)</label>
+                      <input type="text" class="form-control form-control-sm" placeholder="">
+                    </div>
+                    <div class="form-group mb-1">
+                      <label for="pasport_tc" class="small">Паспорт ТС (серия, номер):</label>
+                      <input type="text" class="form-control form-control-sm" placeholder="">
+                    </div>
+                    <div class="form-group mb-1">
+                      <label for="data_tc" class="small">Дата выдачи паспорта ТС</label>
+                      <input type="text" class="form-control form-control-sm datepicker" placeholder="">
+                    </div>
+                    <div class="form-group mb-1">
+                      <label for="org_pasport" class="small">Наименование организации, выдавшей паспорт</label>
+                      <input type="text" class="form-control form-control-sm" placeholder="">
+                    </div>
+                    <div class="form-group mb-1">
+                      <label for="znak" class="small">Государственный регистрационный знак</label>
+                      <input type="text" class="form-control form-control-sm" placeholder="">
+                    </div>
+                    <div class="form-group mb-1">
+                      <label for="license" class="small">Свидетельство о регистрации ТС</label>
+                      <input type="text" class="form-control form-control-sm" placeholder="">
+                    </div>
+                    <div class="form-group">
+                      <label for="data_tc_reg" class="small">Дата выдачи свидетельства о регистрации ТС</label>
+                      <input type="text" class="form-control form-control-sm datepicker" placeholder="">
+                    </div>
+                    <div class="form-group">
+                      <label for="org_tc_reg" class="small">Орган, выдавший свидетельство о регистрации ТС</label>
+                      <input type="text" class="form-control form-control-sm" placeholder="">
+                    </div>
+                    <div class="form-group">
+                      <label for="key_num" class="small">Количество ключей</label>
+                      <input type="text" class="form-control form-control-sm" placeholder="">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-primary">Сохранить</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </div>
+</div>
+
+  <!-- Main Scripts -->
+  <!-- Main Scripts -->
+  <script src="../js/script.min.js"></script>
+  <script src="../js/app.min.js"></script>
+
+  <!-- Plugins -->
+  <script src="../../plugins/datatables/jquery.dataTables.bootstrap4.responsive.min.js"></script>
+  <script src="https://cdn.datatables.net/plug-ins/1.10.20/i18n/Russian.json"></script>
+  <script src="../../plugins/flatpickr/flatpickr.min.js"></script>
+  <script src="../../plugins/flatpickr/plugins/monthSelect/index.js"></script>
+  <script src="../../plugins/clockpicker/bootstrap-clockpicker.min.js"></script>
+  <script>
+    $(() => {
+
+      // Inline
+      flatpickr('.datepicker-inline', {
+        inline: true,
+      })
+
+      // Basic
+      flatpickr('.datepicker')
+
+      // Datetime
+      flatpickr('.datetimepicker', {
+        enableTime: true
+      })
+
+      // Allow Input
+      flatpickr('.datepicker-input', {
+        allowInput: true
+      })
+
+      // External elements
+      flatpickr('.datepicker-wrap', {
+        allowInput: true,
+        clickOpens: false,
+        wrap: true,
+      })
+
+      // Date Range
+      flatpickr('.daterangepicker', {
+        mode: 'range'
+      })
+      flatpickr('.daterangepicker-wrap', {
+        allowInput: true,
+        clickOpens: false,
+        wrap: true,
+        mode: 'range'
+      })
+
+      // Multiple Dates
+      flatpickr('.datepicker-multiple', {
+        mode: 'multiple'
+      })
+      flatpickr('.datepicker-multiple-wrap', {
+        allowInput: true,
+        clickOpens: false,
+        wrap: true,
+        mode: 'multiple'
+      })
+
+      // Month Picker
+      flatpickr('.monthpicker', {
+        plugins: [
+          new monthSelectPlugin({
+            shorthand: true,
+            dateFormat: 'Y-m',
+            altFormat: 'Y-m',
+          })
+        ]
+      })
+      flatpickr('.monthpicker-wrap', {
+        allowInput: true,
+        clickOpens: false,
+        wrap: true,
+        plugins: [
+          new monthSelectPlugin({
+            shorthand: true,
+            dateFormat: 'Y-m',
+            altFormat: 'Y-m',
+          })
+        ]
+      })
+
+      // Time Picker
+      flatpickr('.timepicker', {
+        enableTime: true,
+        noCalendar: true,
+        dateFormat: 'H:i',
+        minuteIncrement: 1,
+      })
+      flatpickr('.timepicker-wrap', {
+        allowInput: true,
+        enableTime: true,
+        noCalendar: true,
+        dateFormat: 'H:i',
+        minuteIncrement: 1,
+        clickOpens: false,
+        wrap: true,
+      })
+
+      // Clock Picker
+      $('.clockpicker').clockpicker({ autoclose: true })
+
+    })
+  </script>
+  <script>
+    $(() => {
+      App.checkAll()
+      // Run datatable
+      var table = $('#example').DataTable({
+        searching: false,
+        lengthChange: false,
+        "language": {
+          "url": "https://cdn.datatables.net/plug-ins/1.10.20/i18n/Russian.json"
+        },
+        drawCallback: function () {
+          $('.dataTables_paginate > .pagination').addClass('pagination-sm justify-content-end') // make pagination small
+        }
+      })
+
+      // Toggle Column filter function
+      var responsiveFilter = function (table, index, val) {
+        var th = $(table).find('.dt-column-filter th').eq(index)
+        val === true ? th.removeClass('d-none') : th.addClass('d-none')
+      }
+      // Run Toggle Column filter at first
+      $.each(table.columns().responsiveHidden(), function (index, val) {
+        responsiveFilter('#example', index, val)
+      })
+      // Run Toggle Column filter on responsive-resize event
+      table.on('responsive-resize', function (e, datatable, columns) {
+        $.each(columns, function (index, val) {
+          responsiveFilter('#example', index, val)
+        })
+      })
+
+    })
+  </script>
+</body>
+</html>
